@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "abBfBP1xcEeMkg-HViZPy"
+uri = "file://artifacts/whatslight/release/WhatsLight-Setup-0.0.0.exe"
+type = "unspecified"
+title = "WhatsLight – aktualisierte Windows-App"
+description = "Aktualisierte portable Windows-App mit korrigiertem Datei-Loader. Beim Start öffnet sich die Sidebar direkt am rechten Bildschirmrand; Alt+W blendet sie ein oder aus."

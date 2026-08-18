@@ -1,0 +1,211 @@
+Ich brauche einen lightweight whatsapp client füt windows 11, der sich in die Desktopumgebung integriert. Ich habe keine Lust immer die Fenster zuwechseln. Es soll nahtlos beim arbeiten überall sichtbar sein. Konzipiere bitte was cooles.
+
+
+
+
+
+
+
+8:52 AM
+
+
+
+
+
+
+WhatsLight – WhatsApp als Teil des Desktops
+Kein klassisches Messenger-Fenster, sondern eine schmale, jederzeit erreichbare Kommunikationsleiste für Windows 11.
+┌──────────────────────── Arbeitsbereich ───────────────────────┬─────────────┐
+│                                                              │  WhatsLight │
+│  Visual Studio / Browser / Excel                             │             │
+│                                                              │  ● Anna   2 │
+│                                                              │  ● Team   1 │
+│                                                              │  ○ Familie  │
+│                                                              │             │
+│                                                              │  Nachricht  │
+└──────────────────────────────────────────────────────────────┴─────────────┘
+Das Bedienkonzept
+WhatsLight sitzt magnetisch am rechten oder linken Bildschirmrand und kennt drei Zustände:
+- Glow: Nur ein schmaler, halbtransparenter Streifen mit Profilbildern und ungelesenen Nachrichten.
+- Peek: Maus an den Rand oder Win + Space öffnet eine kompakte Chatansicht über der aktuellen Anwendung.
+- Focus: Ein ausgewählter Chat bleibt als 300–400 Pixel breite Seitenleiste sichtbar. Andere Fenster passen sich optional über Windows Snap automatisch an.
+So bleibt beispielsweise der Teamchat neben Visual Studio sichtbar, ohne dass man ständig mit Alt + Tab wechseln muss.
+Was es besonders macht
+- Click-through-Modus: WhatsLight bleibt sichtbar, nimmt aber keine Mausklicks an, bis eine Taste gehalten wird.
+- Smart Opacity: Beim Schreiben vollständig sichtbar, ansonsten dezent transparent.
+- Quick Reply: Globale Tastenkombination öffnet ein kleines Antwortfeld über jeder Anwendung.
+- Voice Drop: Shortcut gedrückt halten, Sprachnachricht aufnehmen, loslassen und prüfen.
+- Pin Chats: Zwei oder drei wichtige Chats können dauerhaft als kleine Kontaktblasen am Bildschirmrand liegen.
+- Focus Guard: Während konzentrierter Arbeit erscheinen nur Nachrichten definierter Personen.
+- Meeting Privacy: Sobald Bildschirmfreigabe oder Präsentationsmodus erkannt wird, verschwinden Namen, Vorschauen und Profilbilder.
+- Multi-Monitor: WhatsLight kann an einen bestimmten Monitor oder sogar an einen virtuellen Desktop gebunden werden.
+- Native Windows-Gefühl: Mica-Hintergrund, abgerundete Ecken, Tray-Icon, Autostart, Windows-Benachrichtigungen sowie Hell-/Dunkelmodus.
+Visuelle Richtung
+Ich würde es ruhig und hochwertig gestalten: Anthrazit oder milchiges Mica statt WhatsApp-Grün als große Fläche. Grün erscheint nur als feiner Aktivitätsindikator. Animationen sind kurz und physikalisch – die Leiste gleitet nicht einfach hinein, sondern löst sich leicht vom Bildschirmrand.
+Ein interessanter Detailmodus wäre Ambient Presence: Profilbilder wichtiger Kontakte leuchten minimal auf, sobald sie schreiben. Der eigentliche Text erscheint erst auf Interaktion. Dadurch nimmt man Kommunikation wahr, ohne permanent abgelenkt zu werden.
+Technische Umsetzung
+Für eine robuste Windows-11-App bietet sich an:
+- C# mit WinUI 3 für Fenster, Snap-Verhalten, Tray und native Effekte
+- WebView2 mit der offiziellen WhatsApp-Web-/Multi-Device-Sitzung
+- keine eigene inoffizielle WhatsApp-Protokollimplementierung
+- verschlüsselte lokale Einstellungen über Windows Credential Manager
+- keine Speicherung von Nachrichten außerhalb der eingebetteten WhatsApp-Sitzung
+Der erste sinnvolle MVP wäre: Anmeldung per QR-Code, randgebundene Seitenleiste, Always-on-top, Peek-Modus, globale Tastenkombinationen, Transparenz, Tray und Privacy-Modus.
+Der zentrale Leitsatz wäre: „WhatsApp ist da, aber nie im Weg.“
+
+
+8:52 AM
+
+
+
+
+
+
+
+
+ja geil! Kannst du ne concept art zeigen?
+
+
+
+
+
+
+
+8:52 AM
+
+
+
+
+
+
+Worked for 1m 38s
+
+
+
+Hier ist die erste Concept Art für WhatsLight: Windows-11-Mica-Design, schmale Kontaktleiste, ausklappbarer Peek-Chat, Edge-Glow und transparenter Click-through-Modus.
+Die Imagegen-Skill hat das Konzept bewusst als realistisch umsetzbares Produkt-Mockup visualisiert – nicht als futuristische Fantasie. Als Nächstes könnten wir daraus einen interaktiven UI-Prototyp bauen.
+
+
+
+
+
+
+
+
+8:54 AM
+
+
+
+
+
+
+
+
+ja cool
+
+
+
+
+
+
+
+8:54 AM
+
+
+
+
+
+
+Freut mich! Das Konzept hat definitiv Potenzial – besonders die Kombination aus Edge-Glow, Peek-Chat und Click-through-Modus. Wenn du willst, bauen wir als Nächstes direkt einen klickbaren Windows-11-Prototypen daraus.
+
+
+8:54 AM
+
+
+
+
+
+
+
+
+dann leg mal los
+
+
+
+
+
+
+
+8:55 AM
+
+
+
+
+
+
+Worked for 6m 39s
+
+
+
+Der klickbare WhatsLight-Prototyp läuft.
+Enthalten sind:
+- Glow-, Peek- und Focus-Modus
+- Kontakte mit ungelesenen Nachrichten
+- Nachrichteneingabe
+- Focus Guard und Meeting Privacy
+- simulierter Click-through-Modus
+- Alt + W zum Ein-/Ausblenden, Esc zum Einklappen
+- responsives Windows-11-Mica-Design
+Starten:
+npm.cmd run dev
+Dann http://127.0.0.1:4173 öffnen.
+Wichtige Dateien:
+- [Prototyp öffnen (line 1)](/C:/Users/Mauro/Desktop/WhatsLight/index.html:1)
+- [Interaktionslogik (line 1)](/C:/Users/Mauro/Desktop/WhatsLight/app.js:1)
+- [Designsystem (line 1)](/C:/Users/Mauro/Desktop/WhatsLight/styles.css:1)
+- [Gerenderte Vorschau](/C:/Users/Mauro/Desktop/WhatsLight/whatslight-preview.png)
+- [Anleitung (line 1)](/C:/Users/Mauro/Desktop/WhatsLight/README.md:1)
+Syntaxprüfung und Browser-Rendering sind erfolgreich. Die WhatsApp-Verbindung ist noch nicht integriert – aktuell ist es der High-Fidelity-Prototyp für Bediengefühl und Produktdesign.
+
+Edited 6 files+637-0Review changesUndoReview
+
+README.mdREADME.md+24-0
+app.jsapp.js+137-0
+dev-server.mjsdev-server.mjs+30-0
+Show 3 more files
+
+
+
+
+9:01 AM
+
+
+
+
+
+
+
+
+starte
+
+
+
+
+
+
+
+9:04 AM
+
+
+
+
+
+
+Worked for 31s
+
+
+
+WhatsLight läuft und wurde in Edge geöffnet. Der lokale Server antwortet erfolgreich unter http://127.0.0.1:4173.
+
+
+9:05 AM
